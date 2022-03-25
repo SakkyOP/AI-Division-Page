@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@100&display=swap');
+/* fonts for head and body */
+
+.about-us .hero {
+    position: relative;
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 2rem 4rem;
+    text-align: left;
+    color: white;
+}
+
+.about-us .hero::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(https://vitbhopal.ac.in/file/2020/02/03-995A3066_Copy_Ed-scaled-e1580793143908.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(30%);
+}
+
+.about-us .hero .about-heading {
+    min-height: max-content;
+    width: max(70%, 20rem);
+    z-index: 1;
+}
+
+.about-us .hero .about-heading > h2 {
+    font-size: clamp(2rem, 2vmax, 3rem);
+    font-family: "Montserrat";
+}
+
+.about-us .hero .about-heading > p {
+    font-size: clamp(0.8rem, 3vmax, 1.4rem);
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.about-us .hero .content {
+    font-size: clamp(0.8rem, 3vmax, 1.4rem);
+    min-height: max-content;
+    width: max(90%, 20rem);
+    z-index: 1;
+}
+
+.about-us .hero .content > p {
+    margin-top: 40px;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.svg-about-us {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    fill: #121212; /* this should be set to body color */
+    z-index: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-us .hero {
+        text-align: center;
+        align-items: center;
+  }
+
+  .about-us .hero .about-heading > p {
+      display: none;
+  }
+
+  .extra-about {
+      display: none;
+  }
+
+  .svg-about-us {
+        display: none;
+  }
+}
